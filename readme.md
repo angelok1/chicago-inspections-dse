@@ -1,5 +1,5 @@
 # Predicting Food Inspection Outcomes in Chicago
-**Based on the original project contributed by:**<br>
+**Based on the original graduate project at Haravrd contributed by:**<br>
 Angelo Kastroulis, Calvin J Chiew, Tim Hagmann<br>
 
 ## Background
@@ -22,7 +22,7 @@ DIRECTORY           | DESCRIPTION
 
 ## Prerequisites
 
-You'll need python 2.7 and Datastax Enterprise 5 preferrbly installed in a cluster, but not required.
+You'll need python 2.7 and Datastax Enterprise 5.
 
 ## Introduction
 There are more than 15,000 food establishments in Chicago but fewer than three dozen food inspectors. 15% of these establishments will have at least one critical violation. Many of them are discovered long after the violations have occurred, thereby exposing the public to risk of food-borne illnesses.
@@ -31,7 +31,7 @@ To address this problem, the City of Chicago developed a model to forecast estab
 
 ## Data
 
-In this projecgt, I used publicly available datasets of about 130,000 food inspections, business license, crime, and sanitation code 311 complaints data from Chicago’s open data portal as well as daily climate data from the National Centers for Environmental Information (NCEI).
+In this project, I used publicly available datasets of about 130,000 food inspections, business license, crime, and sanitation code (311) complaint data from Chicago’s open data portal as well as daily climate data from the National Centers for Environmental Information (NCEI).
 
 Some aggregated features including proportion of past inspections failed, days since last inspection, most recent inspection outcome, and three/five-day rolling average of max temperatures were considered. Crime, weather and sanitation data were mapped to inspections by “clustering” them in proximity.
 
@@ -39,21 +39,21 @@ As expected, a majority of the time was consumed by data cleaning, exploration, 
 
 ### Exploration
 
-Data exploration was performed on [climate](/Exploring%20Climate.ipynb), [inspection data](/Exploring%20Inspection%20Data.ipynb), and [combined inspection and license data](/Exploring%20Combined%20Sets.ipynb).
+Data exploration was performed on [weather](/ExploringWeather.ipynb), [inspection data](/ExploringInspectionData.ipynb), and [combined inspection and license data](/ExploringCombinedSets.ipynb).
 
 ## Data Wrangling
 
-- [Step 1](/Step%201-Inspection%20Data.ipynb): Inspection Data
-- [Step 2](/Step%202-Business%20Data.ipynb): Business License Data
-- [Step 3](/Step%203-Crime%20Data.ipynb): Crime Data
-- [Step 4](/Step%204-Sanitation%20Data.ipynb): Sanitation Complaint Data
-- [Step 5](/Step%205-Weather%20Data.ipynb): Weather Data
-- [Step 6](/Step%206-More%20Feature%20Processing.ipynb): Feature processing and joining weather, crime, and sanitation
-- [Step 7](//Step%207-Final%20Modeling.ipynb): Encoding categorical features and combining all data to a final model
+- [Step 1](/Step1-InspectionData.ipynb): Inspection Data
+- [Step 2](/Step2-BusinessData.ipynb): Business License Data
+- [Step 3](/Step3-CrimeData.ipynb): Crime Data
+- [Step 4](/Step4-SanitationData.ipynb): Sanitation Complaint Data
+- [Step 5](/Step5-WeatherData.ipynb): Weather Data
+- [Step 6](/Step6-MoreFeatureProcessing.ipynb): Feature processing and joining weather, crime, and sanitation
+- [Step 7](/Step7-FinalFeatureEngineering.ipynb): Encoding categorical features and combining all data to a final model
 
 ## Modeling
 
-I evaluate Random Forest, Decision Tree, Gradient Boosted Trees, and Logistic Regression models against the training and test set [here](/Step%208-Predicting%20Classification.ipynb).
+I evaluate Random Forest, Decision Tree, Gradient Boosted Trees, and Logistic Regression models against the training and test set [here](/Step8-Modeling.ipynb).
 
-Then, for a discussion on what accuracy means to us and running the models against real data [here](/Step%209-Using%20our%20Model.ipynb).
+Then, for a discussion on what accuracy means to us and running the models against real data [here](/Step9-UsingOurModel.ipynb).
 
